@@ -28,4 +28,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: cp -r ./public ./build
+    - run: git config --global user.name "goransle"
+    - run: git config --global user.email "goransle@gmail.com"
     - run: git add . && git commit -m "latest fresh release from the robot shop"
+    - run: git push https://goransle/svelte-typing-app.git
+    -run
