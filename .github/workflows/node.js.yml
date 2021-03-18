@@ -36,5 +36,6 @@ jobs:
     - run: git add . && git stash
     - run: git checkout gh-pages
     - run: git stash apply | echo
+    - run: git add .
     - run: git commit -m "latest fresh release from the robot shop"
     - run: echo $GH_KEY | git push -u origin gh-pages
