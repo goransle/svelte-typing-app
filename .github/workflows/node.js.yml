@@ -30,9 +30,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: cp -r ./public/** ./
+    - run: git add .
     - run: git config --global user.name "goransle"
     - run: git config --global user.email "goransle@gmail.com"
     - run: git fetch origin
     - run: git checkout gh-pages
-    - run: git add . && git commit -m "latest fresh release from the robot shop"
+    - run: git commit -m "latest fresh release from the robot shop"
     - run: echo $GH_KEY | git push -u origin gh-pages
