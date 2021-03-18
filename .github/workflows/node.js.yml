@@ -33,7 +33,8 @@ jobs:
     - run: git fetch origin
     - run: npm run build --if-present
     - run: cp -r ./public/** ./
-    - run: git add .
+    - run: git add . && git stash
     - run: git checkout gh-pages
+    - run: git stash pop
     - run: git commit -m "latest fresh release from the robot shop"
     - run: echo $GH_KEY | git push -u origin gh-pages
