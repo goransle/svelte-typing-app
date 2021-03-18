@@ -29,7 +29,7 @@ jobs:
         GH_KEY: ${{ secrets.GH_KEY }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: cp -r ./public/* ./
+    - run: cp -r ./public/** ./
     - run: git config --global user.name "goransle"
     - run: git config --global user.email "goransle@gmail.com"
     - run: git fetch origin
