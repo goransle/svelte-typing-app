@@ -32,7 +32,7 @@ jobs:
     - run: git config --global user.email "goransle@gmail.com"
     - run: git fetch origin
     - run: npm run build --if-present
-    - run: cp -r ./public/ ./
+    - run: cp -r ./public/* ./
     - run: git add . && git stash
     - run: git checkout gh-pages
     - run: git reset
