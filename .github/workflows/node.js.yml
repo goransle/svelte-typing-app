@@ -36,7 +36,7 @@ jobs:
     - run: git add . && git stash
     - run: git checkout gh-pages
     - run: git reset
-    - run: git stash apply | echo
+    - run: git stash apply
     - run: git status
     - run: git add .
     - run: git commit -m "latest fresh release from the robot shop" || true # might fail if no changes
