@@ -38,5 +38,5 @@ jobs:
     - run: git reset --hard origin/gh-pages
     - run: git stash apply | echo
     - run: git add .
-    - run: git commit -m "latest fresh release from the robot shop"
+    - run: git commit -m "latest fresh release from the robot shop" || true # might fail if no changes
     - run: echo $GH_KEY | git push -u origin gh-pages
