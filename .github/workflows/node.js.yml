@@ -35,6 +35,7 @@ jobs:
     - run: cp -r ./public/** ./
     - run: git add . && git stash
     - run: git checkout gh-pages
+    - run: git reset --hard origin/gh-pages
     - run: git stash apply | echo
     - run: git add .
     - run: git commit -m "latest fresh release from the robot shop"
